@@ -1,3 +1,24 @@
+/*
++++++++++++++ inset : 0
+
+it sets all four sides (top, right, bottom, and left) of the element to 0. 
+This effectively positions the element's edges at the boundaries of its nearest positioned ancestor 
+(which is an element with a position value other than static).
+
++++++++++++++ z-index
+
+To controll the level of an element like layers in Canva or phtoshop...
+
++++++++++++++ media query
+ Should be always a buttom of the page
+
+
++++++++++++++
+
+
+*/
+
+
 :root {
   background-color: black;
   color: white;
@@ -16,10 +37,10 @@ body
 #root {
   min-height: 100vh;
   display: flex;
+  position: relative;
 }
 
 .ImageContainer {
-  flex: 2; /* Increase this value to give more space to the image */
   display: flex;
 }
 
@@ -27,11 +48,6 @@ body
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.sidebar {
-  flex: 1; /* Decrease this value to give less space to the sidebar */
-  padding: 10px;
 }
 
 footer {
@@ -45,6 +61,24 @@ footer {
   justify-content: space-between;
   margin-left: 5px;
 
+}
+
+footer button
+{
+  background: transparent;
+  margin-bottom:20px;
+  cursor: pointer;
+  font-size: 100%;
+  transition-duration: 200ms; 
+  transition-timing-function: ease-in-out;
+  opacity: 1;
+
+}
+
+footer button:hover
+{
+  font-size : 95%;
+  opacity: 0.5;
 }
 
 h4
@@ -63,7 +97,65 @@ button
 .GradientBackground
 {
   position: absolute;
-  inset: 0; /* To take the full width of the parent container in this case is the fotter */
-  z-index: -1;/* That means that is in the back of everything*/
+  inset: 0;
+  z-index: -1;
   background: linear-gradient(to top,#000,#ffffff00);
+}
+
+
+.sidebar {
+  position: fixed;
+  inset: 0;
+  display: flex; 
+  flex-direction:column;
+  z-index: 1;
+  height: 100%;
+}
+
+.bgOverlay
+{
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 18, 18, 0.38);
+}
+
+.sidebarContent
+{
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width:80%;
+  overflow: auto;
+  background: black;
+  margin-left: auto;
+
+
+}
+
+.sidebarContent button
+{
+  margin-top: 87%;
+  background-color: #00000000;
+  color: rgb(255, 255, 255);
+  border: none;
+  margin-right: 95%;
+  margin-top: 95%;
+}
+
+
+
+@media (min-width : 640px) {
+  .sidebar{
+   position: relative;
+   min-width: 30%;
+  }
+  .sidebarContent button
+  {
+   margin-top: 127%;
+   margin-right: 90%;
+  }
+
+
+  
 }

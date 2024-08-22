@@ -1,16 +1,20 @@
 import Main from "./Componenets/Main";
 import SideBar from "./Componenets/SideBar";
 import Footer from "./Componenets/Footer";
+import { useState } from "react";
 
 function App() {
+
+    const [ShowSidebar,setShowSidebar] = useState(true)
     return (
         <div id="root">
                 <Main />
-                <SideBar /> {/* Sidebar now placed directly in the App */}
+                {
+                    ShowSidebar && (<SideBar /> )
+                }
                 <Footer />
                 </div>
 
     );
 }
-
 export default App;
