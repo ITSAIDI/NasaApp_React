@@ -2,48 +2,68 @@
   background-color: black;
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-* {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+
 }
 
+body
+{
+  padding: 0;
+  margin: 0;
+
+}
 #root {
   min-height: 100vh;
   display: flex;
 }
 
-.wrapper {
-  display: flex;
-  flex: 1;
-}
-
 .ImageContainer {
   flex: 2; /* Increase this value to give more space to the image */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
 }
 
 .SpaceImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
 }
 
 .sidebar {
   flex: 1; /* Decrease this value to give less space to the sidebar */
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
+  padding: 10px;
 }
 
 footer {
   position: fixed;
+  display: flex;
   bottom: 0;
   left: 0;
+  height: 10%;
+  width: 100%;
+  align-items:center;
+  justify-content: space-between;
+  margin-left: 5px;
+
+}
+
+h4
+{
+  margin-top: 5px;
+  margin-bottom: 1px;
+  font-size: 11px;
+
+}
+button
+{
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+.GradientBackground
+{
+  position: absolute;
+  inset: 0; /* To take the full width of the parent container in this case is the fotter */
+  z-index: -1;/* That means that is in the back of everything*/
+  background: linear-gradient(to top,#000,#ffffff00);
 }
