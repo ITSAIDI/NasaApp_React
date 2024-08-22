@@ -4,8 +4,10 @@
 
 function SideBar() {
     return(
-        <div>
-            <h1>hello</h1>
+        <div className="sidebar">
+            <h2>Our Space</h2>
+            <h3>Subhana Allah</h3>
+            <p>Beutiful Spacedcbhsbdcbsudbvczuscvuscvu</p>
         </div>
     )
  }

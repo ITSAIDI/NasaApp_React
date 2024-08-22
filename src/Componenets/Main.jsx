@@ -3,7 +3,7 @@
  function Main() {
     return(
         <div>
-            <h1>hello</h1>
+            <img id="SpaceImage" src=".\src\assets\FakeOne.png" alt="hi" />
         </div>
     )
  }
