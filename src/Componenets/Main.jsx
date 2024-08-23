@@ -1,7 +1,7 @@
-function Main() {
+function Main(props) {
     return (
         <div className="ImageContainer">
-            <img className="SpaceImage" src=".\src\assets\FakeOne.png" alt="Space" />
+            <img className="SpaceImage" src= {props.data.hdurl} alt= {props.data.title }/>
         </div>
     );
 }

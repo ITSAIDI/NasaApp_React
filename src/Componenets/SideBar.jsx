@@ -7,7 +7,7 @@ function SideBar(props) {
                     <h2>Our Space</h2>
                     <div>
                         <p>Description</p>
-                        <p>Beautiful Space dcbhsbdcbsudbvczuscvuscvu</p>
+                        <p>{props.data.explanation}</p>
                     </div>
                     <button onClick = {handleToggleSidebar_S}>
                     <i className="fa-solid fa-angle-right" style={{}}></i>

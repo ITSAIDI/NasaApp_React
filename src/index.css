@@ -40,6 +40,28 @@ body
   position: relative;
 }
 
+.loading
+{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex: 1;
+}
+
+#gear
+{
+
+  margin-left: 400px;
+  font-size: 70px;
+  opacity: 0.2;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
 .ImageContainer {
   display: flex;
 }

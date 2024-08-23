@@ -26,7 +26,7 @@ function App() {
             }
             
         }
-        //FetchImage()
+        FetchImage()
 
     },[])
 
@@ -38,12 +38,17 @@ function App() {
     return (
         <div id="root">
             {
-                Data ? ( <Main />) : <div className="loading"> <i className="fa-solid fa-gear"></i></div>
+                Data ? ( <Main data = {Data} />) : 
+                (<div className="loading"> 
+                        <i id = "gear" className="fa-solid fa-gear"></i>
+                </div>)
             }
             {
-                ShowSidebar && (<SideBar handleToggleSidebar_S = {handleToggleSidebar} /> )
+                ShowSidebar && (<SideBar data = {Data} handleToggleSidebar_S = {handleToggleSidebar} /> )
             }
-            <Footer handleToggleSidebar_F = {handleToggleSidebar}/>
+            {
+                Data && <Footer data = {Data} handleToggleSidebar_F = {handleToggleSidebar}/>
+            }
             </div>
 
     );
