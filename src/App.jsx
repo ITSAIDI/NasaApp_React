@@ -5,14 +5,22 @@ import { useState } from "react";
 
 function App() {
 
-    const [ShowSidebar,setShowSidebar] = useState(true)
+    const NASA_API = import.meta.env.NASA_API_KEY;
+
+    const [ShowSidebar,setShowSidebar] = useState(false)
+
+    function handleToggleSidebar ()
+    {
+        setShowSidebar(prevState => !prevState);
+    };
+
     return (
         <div id="root">
                 <Main />
                 {
-                    ShowSidebar && (<SideBar /> )
+                    ShowSidebar && (<SideBar handleToggleSidebar_S = {handleToggleSidebar} /> )
                 }
-                <Footer />
+                <Footer handleToggleSidebar_F = {handleToggleSidebar}/>
                 </div>
 
     );
